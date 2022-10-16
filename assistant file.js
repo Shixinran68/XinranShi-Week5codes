@@ -2,7 +2,7 @@
 let APIdata; // holds the entire API response
 //let bgColor, txtColor; // vars for colors
 let txtColor
-let aqi; // holds the AQI value 
+let joke; // holds the AQI value 
 
 // preload is called before anything else (even setup()!)
 // useful for calling APIs and loading images/video/sounds
@@ -19,8 +19,8 @@ function setup() {
   console.log(APIdata);
   console.log('*****API response above****');
   // parse the API for what we're looking for and print it out
-  aqi = APIdata.value;
-  console.log('pollution level:' + APIdata.value);
+  joke = APIdata.value;
+  console.log('joke content:' + APIdata.value);
 }
 
   // change the colors depending on the AQI value
@@ -46,9 +46,9 @@ function setup() {
 } */
 
 function draw() {
-  //background(0,0,255);
-  //fill(255,0,0);
+  background(0,0,255);
+  fill(255,0,0);
   textSize(16);
   textAlign(CENTER);
-  text('NYC AQI: ' + aqi, 400, 200);
+  text('Joke: ' + joke, 400, 200);
 }
